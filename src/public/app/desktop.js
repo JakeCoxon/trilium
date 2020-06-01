@@ -6,6 +6,7 @@ import noteAutocompleteService from './services/note_autocomplete.js';
 import macInit from './services/mac_init.js';
 import contextMenu from "./services/context_menu.js";
 import DesktopMainWindowLayout from "./layouts/desktop_main_window_layout.js";
+import SidebarLayout from "./layouts/sidebar_layout.js";
 import glob from "./services/glob.js";
 import DesktopExtraWindowLayout from "./layouts/desktop_extra_window_layout.js";
 import zoomService from './services/zoom.js';
@@ -26,7 +27,7 @@ macInit.init();
 
 bundleService.getWidgetBundlesByParent().then(widgetBundles => {
     const layout = window.glob.isMainWindow
-        ? new DesktopMainWindowLayout(widgetBundles)
+        ? new SidebarLayout(widgetBundles)
         : new DesktopExtraWindowLayout(widgetBundles);
 
     appContext.setLayout(layout);

@@ -67,7 +67,7 @@ ul.fancytree-container {
 
 /* this is done to preserve correct indentation. Better solution would be preferable */
 .fancytree-node:not(.fancytree-folder) .fancytree-expander:before {
-    color: var(--main-background-color); /* setting to background color makes this invisible */
+    color: transparent;
 }
 
 .fancytree-node.fancytree-expanded .fancytree-expander:before {
