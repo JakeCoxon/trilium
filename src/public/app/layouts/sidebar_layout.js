@@ -129,15 +129,46 @@ const RIGHT_PANE_CSS = `
     border: 0;
     padding-left: 5px;
 }
-.note-title {
-    margin-left: var(--ck-spacing-standard);
-    margin-bottom: 16px;
-}
 
 .current-path {
     flex-grow: 0;
 }
 
+
+
+/* narrow content */
+
+
+.note-title-container {
+    max-width: 600px;
+    margin: auto;
+}
+.note-title {
+    margin-left: 0;
+    margin-bottom: 16px;
+}
+
+.note-detail-text-editor > p,
+.note-detail-text-editor > h1,
+.note-detail-text-editor > h2,
+.note-detail-text-editor > h3,
+.note-detail-text-editor > h4,
+.note-detail-text-editor > blockquote,
+.note-detail-text-editor > ul,
+.note-detail-text-editor > ol
+{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.note-detail-text-editor > p {
+    margin-bottom: 0.6rem;
+}
+
+.fancytree-node:not(.fancytree-folder) .fancytree-expander:before {
+    color: inherit;
+}
 </style>`;
 
 export default class SidebarLayout {
